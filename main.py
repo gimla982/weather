@@ -1,2 +1,15 @@
-location = input ("Were do you want to check the weather?")
-print(f"Weather in{location} is 72 degrees with clear skies.")
+import streamlit as st
+
+
+st.markdown ("""
+
+# Title
+## Subtitle
+
+- Bullet1
+- Bullet2
+- Bullet3
+         
+> Amazing Quote
+         
+""")
