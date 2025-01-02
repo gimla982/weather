@@ -3,6 +3,8 @@ import requests
 from datetime import datetime
 import pytz
 
+secret = st.secrets["MY_SECRET"] #acess to secret
+
 def get_weather(city_name, api_key):
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
     complete_url = f"{base_url}q={city_name}&appid={api_key}&units=metric"
@@ -33,7 +35,7 @@ def display_date_time(user_timezone, location_timezone=None):
 
 st.title('Weather App')
 city_name = st.text_input('Enter city name:')
-api_key = "ac2261df167c06bd38f816369574afa5"
+api_key = secret
 user_timezone = 'America/New_York'
 city_timezone = 'Europe/London'
 
