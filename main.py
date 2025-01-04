@@ -5,7 +5,6 @@ import pytz
 import seaborn as sns
 
 secret = st.secrets["MY_SECRET"]
-st.text(secret)
 
 def get_weather(city_name, api_key):
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -48,4 +47,4 @@ if city_name:
 st.write(display_date_time("Asia/Jerusalem"))
 
 st.write("the end")
-st.write("this is not the end")
+st.write("check")
