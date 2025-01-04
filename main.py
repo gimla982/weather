@@ -18,7 +18,7 @@ def get_weather(city_name, api_key):
         temperature = main_data['temp']
         humidity = main_data['humidity']
         weather_condition = weather_data['description']
-        return (f"Weather in {city_name}:  \n Temperature: {temperature}°C   \n Humidity: {humidity}%   \n Condition: {weather_condition}")
+        return (f"##Weather in {city_name}##:  \n Temperature: {temperature}°C   \n Humidity: {humidity}%   \n Condition: {weather_condition}")
     else:
         return "City not found."
 
