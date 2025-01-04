@@ -2,8 +2,10 @@ import streamlit as st
 import requests
 from datetime import datetime
 import pytz
+import seaborn as sns
 
-secret = st.secrets["MY_SECRET"] #acess to secret
+secret = st.secrets["MY_SECRET"]
+st.text(secret)
 
 def get_weather(city_name, api_key):
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -17,7 +19,7 @@ def get_weather(city_name, api_key):
         temperature = main_data['temp']
         humidity = main_data['humidity']
         weather_condition = weather_data['description']
-        return (f"Weather in {city_name}: \n Temperature: {temperature}°C  \n Humidity: {humidity}% \n Condition: {weather_condition}")
+        return (f"Weather in {city_name}:  \n Temperature: {temperature}°C   \n Humidity: {humidity}%   \n Condition: {weather_condition}")
     else:
         return "City not found."
 
@@ -45,4 +47,5 @@ if city_name:
 
 st.write(display_date_time("Asia/Jerusalem"))
 
-st.write("The end")
+st.write("the end")
+st.write("this is not the end")
