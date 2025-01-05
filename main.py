@@ -3,9 +3,6 @@ import pytz
 import requests
 import streamlit as st
 
-import folium
-print(folium.__version__)
-
 secret = st.secrets["MY_SECRET"]
 
 def get_weather(city_name, api_key):
@@ -48,5 +45,4 @@ if city_name:
 
 st.write(display_date_time("Asia/Jerusalem"))
 
-st.write("the end")
 
