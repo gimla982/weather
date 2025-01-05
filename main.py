@@ -1,8 +1,10 @@
-import streamlit as st
-import requests
 from datetime import datetime
 import pytz
-import seaborn as sns
+import requests
+import streamlit as st
+
+import folium
+print(folium.__version__)
 
 secret = st.secrets["MY_SECRET"]
 
@@ -34,8 +36,8 @@ def display_date_time(user_timezone, location_timezone=None):
 
     return result
 
-st.title('Weather App')
-city_name = st.text_input('Enter city name:')
+st.title('**Weather App**')
+city_name = st.text_input('**Enter city name:**')
 api_key = secret
 user_timezone = 'America/New_York'
 city_timezone = 'Europe/London'
@@ -47,4 +49,4 @@ if city_name:
 st.write(display_date_time("Asia/Jerusalem"))
 
 st.write("the end")
-st.write("check")
+
