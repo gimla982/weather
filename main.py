@@ -33,8 +33,8 @@ def display_date_time(user_timezone, location_timezone=None):
 
     return result
 
-st.title('*Weather App*')
-city_name = st.text_input('*Enter city name:*')
+st.title('Weather App')
+city_name = st.text_input('Enter city name:')
 api_key = secret
 user_timezone = 'America/New_York'
 city_timezone = 'Europe/London'
